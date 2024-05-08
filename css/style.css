@@ -128,3 +128,66 @@ header .image img {
   -webkit-box-shadow: 10px 10px 5px 0px rgba(71, 71, 71, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(71, 71, 71, 0.75);
 }
+section .header {
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+.sub-header {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: #ccc;
+}
+.projects {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.project-card {
+  background-color: #27272a;
+  border-radius: 15px;
+  overflow: hidden;
+  box-sizing: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #1d4ed8;
+}
+.project-details {
+  padding: 1rem;
+}
+.project-details h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.project-details p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+.project-details .tecnologies {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+.tecnologies .tecnologie {
+  max-width: 25px;
+  padding: 0;
+  margin: 0;
+}
+.project-button {
+  display: flex;
+  justify-content: space-around;
+}
+.project-details a {
+  color: #1d4ed8;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.project-details a:hover {
+  color: #1e40af;
+}
