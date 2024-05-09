@@ -235,7 +235,7 @@ section .header {
 .contact .card {
   text-align: center;
   background-color: #27272a;
-  padding: 1rem;
+  padding: 3rem;
   border: 2px solid transparent;
   border-radius: 15px;
   transition: all 0.5s ease;
