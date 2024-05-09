@@ -169,7 +169,7 @@ section .header {
   color: #ccc;
   margin-bottom: 1rem;
 }
-.project-details .tecnologies {
+.tecnologies {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1rem;
@@ -177,6 +177,9 @@ section .header {
 .tecnologies .tecnologie {
   max-width: 25px;
   border-bottom: none;
+}
+.mongodb {
+  max-height: 33px;
 }
 .project-button {
   display: flex;
@@ -189,6 +192,39 @@ section .header {
 }
 .project-details a:hover {
   color: #1e40af;
+}
+.skills {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.skill-card {
+  text-align: center;
+  background-color: #27272a;
+  padding: 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+.skill-card:hover {
+  background-color: #323232;
+  border-color: #fff;
+}
+.skill-card .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #1d4ed8;
+}
+.skill-card h4 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.skill-card p {
+  color: #ccc;
+  margin-bottom: 2rem;
 }
 .contact {
   margin-top: 4rem;
