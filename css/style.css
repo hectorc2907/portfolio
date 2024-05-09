@@ -216,16 +216,36 @@ section .header {
   color: #fff;
   border-radius: 5px;
 }
-.contact .card span .tecnologie{
+.contact .card span .tecnologie {
   max-width: 100px;
 }
-.contact .card h4{
+.contact .card h4 {
   margin-bottom: 0.5rem;
   color: #fff;
   font-size: 1.2rem;
   font-weight: 600;
 }
-.contact .card p{
+.contact .card p {
   color: #ccc;
   margin-bottom: 2rem;
+}
+footer {
+  position: relative;
+  gap: 2rem;
+}
+footer .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .column .logo {
+  max-width: 200px;
+  margin-bottom: 2rem;
+}
+.copyright {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  color: #fff;
+  font-size: 0.8rem;
 }
