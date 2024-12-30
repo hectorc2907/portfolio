@@ -5,12 +5,15 @@ export default {
     extend: {
       colors: {
         redIcon: "#E51C24",
+        cianIcon: " #1CE0D9",
       },
       backgroundColor: {
         redIcon: "#E51C24",
+        cianIcon: "#1CE0D9",
       },
       borderColor: {
         redIcon: "#E51C24",
+        cianIcon: "#1CE0D9",
       },
     },
   },
