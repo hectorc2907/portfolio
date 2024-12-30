@@ -38,9 +38,9 @@ const Logo = () => {
         {theme === "light" ? (
           <motion.div
             key="logoLongLight"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: 100, opacity: 0 }}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
             transition={{ duration: 0.2 }}
           >
             <img
@@ -52,9 +52,9 @@ const Logo = () => {
         ) : (
           <motion.div
             key="logoLongDark"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: 100, opacity: 0 }}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
             transition={{ duration: 0.2 }}
           >
             <img
