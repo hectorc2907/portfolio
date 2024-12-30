@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import logoLight from "../../assets/icons/logoLight.png";
+import logoLongLight from "../../assets/icons/logoLongLight.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,18 +29,50 @@ const Header = () => {
         ></div>
       )}
 
-      <div className="sticky z-30 top-0 flex justify-center">
-        <div className="container relative bg-slate-50">
+      <div className="sticky z-30 top-0 flex justify-center bg-slate-50">
+        <div className="container relative">
           <div className="p-2 flex justify-between items-center">
             <a href="/">
-              <img src={logoLight} alt="logoLight" className="w-[50px]" />
+              <img src={logoLight} alt="logoLight" className="lg:hidden w-[50px]" />
+              <img src={logoLongLight} alt="logoLight" className="hidden lg:flex w-[252px]" />
             </a>
-            <div className="text-[50px] cursor-pointer">
+            <div className="flex lg:hidden text-[50px] cursor-pointer">
               {menuOpen ? (
                 <IoClose onClick={() => toggleMenu(false)} />
               ) : (
                 <IoMenu onClick={() => toggleMenu(true)} />
               )}
+            </div>
+            <div className="hidden lg:flex gap-5">
+              <a href="#home" onClick={(e) => scrollToSection(e, "#home")}>
+                <div className="w-full text-center font-semibold border-white border-b-2 hover:border-red-500">
+                  Home
+                </div>
+              </a>
+              <a
+                href="#aboutMe"
+                onClick={(e) => scrollToSection(e, "#aboutMe")}
+              >
+                <div className="w-full text-center font-semibold border-white border-b-2 hover:border-red-500">
+                  Sobre Mí
+                </div>
+              </a>
+              <a
+                href="#project"
+                onClick={(e) => scrollToSection(e, "#project")}
+              >
+                <div className="w-full text-center font-semibold border-white border-b-2 hover:border-red-500">
+                  Proyectos
+                </div>
+              </a>
+              <a
+                href="#contact"
+                onClick={(e) => scrollToSection(e, "#contact")}
+              >
+                <div className="w-full text-center font-semibold border-white border-b-2 hover:border-red-500">
+                  Contactos
+                </div>
+              </a>
             </div>
           </div>
         </div>
