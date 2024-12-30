@@ -11,7 +11,7 @@ const DesktopNav = ({ scrollToSection }) => {
           href={`#${link.id}`}
           onClick={(e) => scrollToSection(e, `#${link.id}`)}
         >
-          <div className="font-semibold border-white border-b-2 hover:border-red-500">
+          <div className="font-semibold border-slate-50 border-b-2 hover:border-redIcon">
             {link.label}
           </div>
         </a>
