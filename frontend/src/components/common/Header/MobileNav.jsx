@@ -1,4 +1,5 @@
 import { navLinks } from "../../../config/navLinks";
+import ToggleThemeMobile from "./ToggleThemeMobile";
 
 // eslint-disable-next-line react/prop-types
 const MobileNav = ({ menuOpen, scrollToSection }) => {
@@ -17,6 +18,7 @@ const MobileNav = ({ menuOpen, scrollToSection }) => {
               </div>
             </a>
           ))}
+          <ToggleThemeMobile />
         </div>
       )}
     </>

@@ -1,4 +1,5 @@
 import { navLinks } from "../../../config/navLinks";
+import ToggleThemeDesktop from "./ToggleThemeDesktop";
 
 // eslint-disable-next-line react/prop-types
 const DesktopNav = ({ scrollToSection }) => {
@@ -10,11 +11,12 @@ const DesktopNav = ({ scrollToSection }) => {
           href={`#${link.id}`}
           onClick={(e) => scrollToSection(e, `#${link.id}`)}
         >
-          <div className="w-full text-center font-semibold border-white border-b-2 hover:border-red-500">
+          <div className="font-semibold border-white border-b-2 hover:border-red-500">
             {link.label}
           </div>
         </a>
       ))}
+      <ToggleThemeDesktop />
     </div>
   );
 };
