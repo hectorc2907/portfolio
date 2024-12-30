@@ -1,10 +1,14 @@
+import { motion } from "motion/react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useTheme } from "../../../contexts/ThemeContext";
 
 const ToggleThemeDesktop = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 0.2 }}
       className={`flex items-center gap-2 ${
         theme === "light" ? "" : "text-gray-50"
       } transition-colors duration-200`}
@@ -20,7 +24,7 @@ const ToggleThemeDesktop = () => {
         Modo {theme === "light" ? "Oscuro" : "Claro"}
       </button>
       {theme === "light" ? <FaMoon /> : <FaSun />}
-    </div>
+    </motion.div>
   );
 };
 

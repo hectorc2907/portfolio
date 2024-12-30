@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { navLinks } from "../../../config/navLinks";
 import { useTheme } from "../../../contexts/ThemeContext";
 import ToggleThemeDesktop from "./ToggleThemeDesktop";
@@ -7,8 +8,11 @@ const DesktopNav = ({ scrollToSection }) => {
   const { theme } = useTheme();
   return (
     <div className="hidden lg:flex gap-5">
-      {navLinks.map((link) => (
-        <a
+      {navLinks.map((link, index) => (
+        <motion.a
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.2 + 0.2 * index, delay: 0.2 }}
           key={link.id}
           href={`#${link.id}`}
           onClick={(e) => scrollToSection(e, `#${link.id}`)}
@@ -22,7 +26,7 @@ const DesktopNav = ({ scrollToSection }) => {
           >
             {link.label}
           </div>
-        </a>
+        </motion.a>
       ))}
       <ToggleThemeDesktop />
     </div>
