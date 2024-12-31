@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { technologies } from "../../../config/serviceConfig";
 import { useTheme } from "../../../contexts/ThemeContext";
 import IconsUtils from "../../../utils/IconsUtils";
@@ -5,7 +6,11 @@ import IconsUtils from "../../../utils/IconsUtils";
 const Skills = () => {
   const { theme } = useTheme();
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.65 }}
+      viewport={{ once: true }}
       className={`mx-3 mt-5 lg:mt-10 p-5 ${
         theme === "light"
           ? "bg-gray-50 text-gray-950"
@@ -23,7 +28,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

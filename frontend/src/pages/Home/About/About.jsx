@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useTheme } from "../../../contexts/ThemeContext";
 import Services from "./Services";
 import Skills from "./Skills";
@@ -13,7 +14,13 @@ const About = () => {
     >
       <div className="container p-2">
         <div className="py-16 lg:py-20">
-          <p className="lg:ms-20 text-3xl lg:text-4xl text-center lg:text-start font-playFair font-semibold italic">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="lg:ms-20 text-3xl lg:text-4xl text-center lg:text-start font-playFair font-semibold italic"
+          >
             Sobre{" "}
             <span
               className={`${
@@ -22,7 +29,7 @@ const About = () => {
             >
               Mí
             </span>
-          </p>
+          </motion.p>
           <Services />
           <Skills />
         </div>
