@@ -18,3 +18,15 @@ export const services = [
     icons: ["mongodb"],
   },
 ];
+
+export const technologies = [
+  "HTML",
+  "CSS",
+  "JAVASCRIPT",
+  "REACT.JS",
+  "BOOTSTRAP",
+  "TAILWINDCSS",
+  "NODE.JS",
+  "EXPRESS.JS",
+  "MONGODB",
+];
