@@ -11,7 +11,7 @@ const Presentation = () => {
       } transition-colors duration-200`}
     >
       <div className="container p-2">
-        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-around py-20">
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-around py-16 lg:py-20">
           <img
             src={profile}
             alt="profile"
@@ -19,17 +19,32 @@ const Presentation = () => {
               theme === "light" ? "border-redIcon" : "border-cianIcon"
             }`}
           />
-          <div className="my-10">
-            <p className="text-5xl lg:text-6xl font-playFair font-semibold">
-              Hector Clessi
+          <div className="my-5 flex flex-col">
+            <div className="flex flex-col">
+              <p className="text-5xl lg:text-6xl text-center font-playFair font-semibold">
+                Hector Clessi
+              </p>
+              <p
+                className={`text-xl lg:text-2xl text-center ${
+                  theme === "light" ? "text-redIcon" : "text-cianIcon"
+                } italic`}
+              >
+                Desarrollador Full-Stack
+              </p>
+            </div>
+            <p className="max-w-[450px] my-5 text-gray-500 text-center">
+              Especializado en crear aplicaciones web eficientes y escalables,
+              combinando habilidades en frontend y backend.
             </p>
-            <p
-              className={`text-xl lg:text-2xl text-center ${
-                theme === "light" ? "text-redIcon" : "text-cianIcon"
-              } italic`}
+            <a
+              href="https://drive.google.com/file/d/1Cf_bEv0G0G_PBC6UCCD-SSzjbA47HqAB/view?usp=sharing"
+              target="_blank"
+              className="flex justify-center"
             >
-              Desarrollador Full-Stack
-            </p>
+              <div className="max-w-[150px] w-full py-2 text-white text-center rounded-xl bg-gradient-to-r from-redIcon to-cianIcon hover:brightness-110">
+                Descargar CV
+              </div>
+            </a>
           </div>
         </div>
       </div>
