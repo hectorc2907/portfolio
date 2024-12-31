@@ -4,15 +4,15 @@ export const navLinks = [
     label: "Home",
   },
   {
-    id: "aboutMe",
+    id: "about",
     label: "Sobre Mí",
   },
   {
-    id: "project",
+    id: "projects",
     label: "Proyectos",
   },
   {
-    id: "contact",
+    id: "contacts",
     label: "Contactos",
   },
 ];
