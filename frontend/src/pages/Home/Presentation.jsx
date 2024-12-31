@@ -1,5 +1,6 @@
 import { useTheme } from "../../contexts/ThemeContext";
 import profile from "../../assets/img/profile.jpg";
+import { motion } from "motion/react";
 
 const Presentation = () => {
   const { theme } = useTheme();
@@ -12,13 +13,22 @@ const Presentation = () => {
     >
       <div className="container p-2">
         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-around py-16 lg:py-20">
-          <img
-            src={profile}
-            alt="profile"
-            className={`max-w-[500px] w-full rounded-full p-2 lg:order-last border-2 ${
-              theme === "light" ? "border-redIcon" : "border-cianIcon"
-            }`}
-          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="max-w-[500px] md:min-w-[500px] min-h-[392px] md:min-h-[500px] lg:order-last"
+          >
+            <img
+              src={profile}
+              alt="profile"
+              loading="eager"
+              className={`w-full rounded-full p-2 border-2 ${
+                theme === "light" ? "border-redIcon" : "border-cianIcon"
+              }`}
+            />
+          </motion.div>
           <div className="my-5 flex flex-col">
             <div className="flex flex-col">
               <p className="text-5xl lg:text-6xl text-center font-playFair font-semibold">

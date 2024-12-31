@@ -21,7 +21,7 @@ const Logo = () => {
             <img
               src={logoLight}
               alt="logoLight"
-              className="lg:hidden w-[50px]"
+              className="lg:hidden w-[50px] min-h-[51.92px]"
             />
           </motion.div>
         ) : (
@@ -32,7 +32,11 @@ const Logo = () => {
             exit={{ scale: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <img src={logoDark} alt="logoDark" className="lg:hidden w-[50px]" />
+            <img
+              src={logoDark}
+              alt="logoDark"
+              className="lg:hidden w-[50px] min-h-[51.92px]"
+            />
           </motion.div>
         )}
         {theme === "light" ? (
@@ -46,7 +50,7 @@ const Logo = () => {
             <img
               src={logoLongLight}
               alt="logoLongLight"
-              className="hidden lg:flex w-[252px]"
+              className="hidden lg:flex w-[252px] min-h-[51.94px]"
             />
           </motion.div>
         ) : (
@@ -60,7 +64,7 @@ const Logo = () => {
             <img
               src={logoLongDark}
               alt="logoLongDark"
-              className="hidden lg:flex w-[252px]"
+              className="hidden lg:flex w-[252px] min-h-[51.94px]"
             />
           </motion.div>
         )}
