@@ -1,5 +1,5 @@
 import Presentation from "./Presentation/Presentation";
-import About from "./About";
+import About from "./About/About";
 import Projects from "./Projects";
 import Contacts from "./Contacts";
 
