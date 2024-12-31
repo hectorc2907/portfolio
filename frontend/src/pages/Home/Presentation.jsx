@@ -31,22 +31,42 @@ const Presentation = () => {
           </motion.div>
           <div className="my-5 flex flex-col">
             <div className="flex flex-col">
-              <p className="text-5xl lg:text-6xl text-center font-playFair font-semibold">
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-5xl lg:text-6xl text-center font-playFair font-semibold"
+              >
                 Hector Clessi
-              </p>
-              <p
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.25 }}
+                viewport={{ once: true }}
                 className={`text-xl lg:text-2xl text-center ${
                   theme === "light" ? "text-redIcon" : "text-cianIcon"
                 } italic`}
               >
                 Desarrollador Full-Stack
-              </p>
+              </motion.p>
             </div>
-            <p className="max-w-[450px] my-5 text-gray-500 text-center">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="max-w-[450px] my-5 text-gray-500 text-center"
+            >
               Especializado en crear aplicaciones web eficientes y escalables,
               combinando habilidades en frontend y backend.
-            </p>
-            <a
+            </motion.p>
+            <motion.a
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+              viewport={{ once: true }}
               href="https://drive.google.com/file/d/1Cf_bEv0G0G_PBC6UCCD-SSzjbA47HqAB/view?usp=sharing"
               target="_blank"
               className="flex justify-center"
@@ -54,7 +74,7 @@ const Presentation = () => {
               <div className="max-w-[150px] w-full py-2 text-white text-center rounded-xl bg-gradient-to-r from-redIcon to-cianIcon hover:brightness-110">
                 Descargar CV
               </div>
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>
