@@ -15,7 +15,7 @@ const DownloadButton = () => {
         <motion.div
           whileHover={{ scale: 1.2 }}
           transition={{ duration: 0.2 }}
-          className="py-2 text-white text-center rounded-xl bg-gradient-to-r from-redIcon to-cianIcon hover:brightness-125"
+          className="py-2 text-white text-center rounded-xl bg-gradient-to-r from-redIcon to-cianIcon hover:brightness-[1.2]"
         >
           Descargar CV
         </motion.div>
