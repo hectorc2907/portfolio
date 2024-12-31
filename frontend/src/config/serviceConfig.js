@@ -28,5 +28,6 @@ export const technologies = [
   "TAILWINDCSS",
   "NODE.JS",
   "EXPRESS.JS",
+  "REACT NATIVE",
   "MONGODB",
 ];

@@ -26,6 +26,8 @@ const IconsUtils = ({ tech }) => {
       return <FaNodeJs color="#8EC608" />;
     case "express.js":
       return <SiExpress color={theme === "light" ? "#000000" : "#FFFFFF"} />;
+    case "react native":
+      return <FaReact color="#1BA1CC" />;
     case "mongodb":
       return <SiMongodb color="#17AD55" />;
     default:
