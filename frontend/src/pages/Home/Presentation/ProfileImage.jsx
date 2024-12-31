@@ -10,7 +10,7 @@ const ProfileImage = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.2 }}
       viewport={{ once: true }}
-      className="max-w-[500px] md:min-w-[500px] min-h-[392px] md:min-h-[500px] lg:order-last"
+      className="md:max-w-[400px] lg:max-w-[500px] md:min-w-[400px] lg:min-w-[500px] min-h-[392px] md:min-h-[400px] lg:min-h-[500px] lg:order-last"
     >
       <img
         src={profile}
