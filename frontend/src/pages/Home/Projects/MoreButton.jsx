@@ -8,7 +8,7 @@ const MoreButton = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.35 }}
         viewport={{ once: true }}
-        href="https://drive.google.com/file/d/1Cf_bEv0G0G_PBC6UCCD-SSzjbA47HqAB/view?usp=sharing"
+        href="https://github.com/hectorc2907?tab=repositories"
         target="_blank"
         className="max-w-[150px] w-full"
       >
