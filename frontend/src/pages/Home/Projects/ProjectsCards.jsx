@@ -1,5 +1,6 @@
 import { projects } from "../../../config/projectConfig";
 import { useTheme } from "../../../contexts/ThemeContext";
+import { motion } from "motion/react";
 import IconsUtils from "../../../utils/IconsUtils";
 
 const ProjectsCards = () => {
@@ -8,8 +9,12 @@ const ProjectsCards = () => {
     <div className="flex flex-col items-center">
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 + 0.15 * index }}
+            viewport={{ once: true }}
             className={`max-w-[350px] flex flex-col rounded-xl shadow-md ${
               theme === "light" ? "" : "shadow-cianIcon"
             }`}
@@ -17,7 +22,7 @@ const ProjectsCards = () => {
             <img
               src={project.img}
               alt={project.title}
-              className="rounded-t-xl"
+              className="max-w-[350px] max-h-[175px] rounded-t-xl"
             />
             <p className="mt-5 text-center text-2xl font-playFair font-semibold">
               {project.title}
@@ -54,7 +59,7 @@ const ProjectsCards = () => {
                 Preview <IconsUtils tech="web" />
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
