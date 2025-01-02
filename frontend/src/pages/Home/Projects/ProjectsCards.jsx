@@ -7,7 +7,7 @@ const ProjectsCards = () => {
   const { theme } = useTheme();
   return (
     <div className="flex flex-col items-center">
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      <div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
         {projects.map((project, index) => (
           <motion.div
             key={index}

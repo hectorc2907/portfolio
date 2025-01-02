@@ -1,6 +1,7 @@
 import { useTheme } from "../../../contexts/ThemeContext";
 import { motion } from "motion/react";
 import ProjectsCards from "./ProjectsCards";
+import MoreButton from "./MoreButton";
 
 const Projects = () => {
   const { theme } = useTheme();
@@ -12,7 +13,7 @@ const Projects = () => {
       } transition-colors duration-200`}
     >
       <div className="container p-2">
-        <div className="py-16 lg:py-20">
+        <div className="py-16 lg:py-20 xl:py-28">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -30,6 +31,7 @@ const Projects = () => {
             royectos
           </motion.p>
           <ProjectsCards />
+          <MoreButton />
         </div>
       </div>
     </section>
