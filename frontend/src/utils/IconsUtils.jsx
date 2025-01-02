@@ -1,10 +1,17 @@
 /* eslint-disable react/prop-types */
 import { useTheme } from "../contexts/ThemeContext";
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import {
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaGithub,
+} from "react-icons/fa";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
+import { MdOutlineWeb } from "react-icons/md";
 
 const IconsUtils = ({ tech }) => {
   const { theme } = useTheme();
@@ -30,6 +37,10 @@ const IconsUtils = ({ tech }) => {
       return <FaReact color="#1BA1CC" />;
     case "mongodb":
       return <SiMongodb color="#17AD55" />;
+    case "github":
+      return <FaGithub color={theme === "light" ? "#000000" : "#FFFFFF"} />;
+    case "web":
+      return <MdOutlineWeb color={theme === "light" ? "#000000" : "#FFFFFF"} />;
     default:
       return <span>Ícono no disponible</span>;
   }
