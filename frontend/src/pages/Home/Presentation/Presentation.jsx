@@ -12,7 +12,7 @@ const Presentation = () => {
       } transition-colors duration-200`}
     >
       <div className="container p-2">
-        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-around py-16 lg:py-24 xl:py-32">
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-around py-16 lg:py-32">
           <ProfileImage />
           <ProfileText />
         </div>
