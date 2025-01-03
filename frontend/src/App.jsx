@@ -1,17 +1,20 @@
 import { ToastContainer } from "react-toastify";
-import AppRoutes from "./routes/AppRoutes";
 import { useTheme } from "./contexts/ThemeContext";
+import { HelmetProvider } from "react-helmet-async";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   const { theme } = useTheme();
   return (
     <>
-      <ToastContainer
-        position="bottom-right"
-        autoClose={1500}
-        theme={theme === "light" ? "light" : "dark"}
-      />
-      <AppRoutes />
+      <HelmetProvider>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={1500}
+          theme={theme === "light" ? "light" : "dark"}
+        />
+        <AppRoutes />
+      </HelmetProvider>
     </>
   );
 }

@@ -5,7 +5,7 @@ export const projects = [
     description:
       "Portafolio moderno y responsivo con React, Tailwind CSS y animaciones con Motion, destacando proyectos y habilidades.",
     technologies: ["react.js", "tailwindcss"],
-    repository: "#",
+    repository: "https://github.com/hectorc2907/portfolio.git",
     preview: "#",
   },
 ];
