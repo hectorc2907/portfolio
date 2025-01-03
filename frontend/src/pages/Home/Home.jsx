@@ -1,7 +1,7 @@
 import Presentation from "./Presentation/Presentation";
 import About from "./About/About";
 import Projects from "./Projects/Projects";
-import Contacts from "./Contacts";
+import Contacts from "./Contacts/Contacts";
 
 const Home = () => {
   return (

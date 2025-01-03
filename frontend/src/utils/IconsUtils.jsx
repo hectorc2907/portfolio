@@ -6,12 +6,17 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaGithub,
+  FaWhatsapp,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
 } from "react-icons/fa";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress, SiMongodb } from "react-icons/si";
+import { SiExpress, SiGmail, SiMongodb } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { MdOutlineWeb } from "react-icons/md";
+import { PiMicrosoftOutlookLogoFill } from "react-icons/pi";
 
 const IconsUtils = ({ tech }) => {
   const { theme } = useTheme();
@@ -41,6 +46,18 @@ const IconsUtils = ({ tech }) => {
       return <FaGithub color={theme === "light" ? "#000000" : "#FFFFFF"} />;
     case "web":
       return <MdOutlineWeb color={theme === "light" ? "#000000" : "#FFFFFF"} />;
+    case "whatsapp":
+      return <FaWhatsapp />;
+    case "facebook":
+      return <FaFacebook />;
+    case "instagram":
+      return <FaInstagram />;
+    case "linkedin":
+      return <FaLinkedin />;
+    case "gmail":
+      return <SiGmail />;
+    case "outlook":
+      return <PiMicrosoftOutlookLogoFill />;
     default:
       return <span>Ícono no disponible</span>;
   }
