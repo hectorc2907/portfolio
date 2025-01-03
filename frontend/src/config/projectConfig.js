@@ -6,6 +6,6 @@ export const projects = [
       "Portafolio moderno y responsivo con React, Tailwind CSS y animaciones con Motion, destacando proyectos y habilidades.",
     technologies: ["react.js", "tailwindcss"],
     repository: "https://github.com/hectorc2907/portfolio.git",
-    preview: "#",
+    preview: "https://portfolio-hector-clessi-zbxv.onrender.com/",
   },
 ];

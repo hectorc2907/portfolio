@@ -15,25 +15,21 @@ const Footer = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.2, delay:0.2 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
           className={`pt-[1px] mx-5 ${
             theme === "light" ? "bg-gray-950" : "bg-cianIcon"
           }`}
         />
         <AnimatePresence mode="wait">
-          <a
-            href="/"
-            key={theme}
-            className="m-5 flex justify-center"
-          >
+          <a href="/" key={theme} className="m-5 flex justify-center">
             {theme === "light" ? (
               <motion.div
                 key="logoLongLight"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 exit={{ scale: 0 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
               >
                 <img
@@ -48,7 +44,7 @@ const Footer = () => {
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 exit={{ scale: 0 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
                 viewport={{ once: true }}
               >
                 <img
@@ -66,7 +62,7 @@ const Footer = () => {
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             exit={{ scale: 0 }}
-            transition={{ duration: 0.2, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
             viewport={{ once: true }}
             className={`text-center ${theme === "light" ? "" : "text-gray-50"}`}
           >
