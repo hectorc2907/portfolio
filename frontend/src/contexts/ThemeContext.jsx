@@ -12,7 +12,7 @@ export const ThemeProvider = ({ children }) => {
     }
 
     const prefersDark = window.matchMedia(
-      "(prefers-color-schema: dark)"
+      "(prefers-color-scheme: dark)"
     ).matches;
 
     return prefersDark ? "dark" : "light";
