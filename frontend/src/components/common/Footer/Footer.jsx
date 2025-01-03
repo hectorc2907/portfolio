@@ -22,14 +22,18 @@ const Footer = () => {
           }`}
         />
         <AnimatePresence mode="wait">
-          <a href="/" key={theme} className="m-5 flex justify-center">
+          <motion.a
+            href="/"
+            key={theme}
+            className="m-5 flex justify-center"
+          >
             {theme === "light" ? (
               <motion.div
                 key="logoLongLight"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 exit={{ scale: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                transition={{ duration: 0.2 }}
                 viewport={{ once: true }}
               >
                 <img
@@ -44,7 +48,7 @@ const Footer = () => {
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 exit={{ scale: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
+                transition={{ duration: 0.2 }}
                 viewport={{ once: true }}
               >
                 <img
@@ -54,7 +58,7 @@ const Footer = () => {
                 />
               </motion.div>
             )}
-          </a>
+          </motion.a>
         </AnimatePresence>
         <div className="mb-5">
           <motion.p
@@ -62,7 +66,7 @@ const Footer = () => {
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             exit={{ scale: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
             className={`text-center ${theme === "light" ? "" : "text-gray-50"}`}
           >
