@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useTheme } from "../../../contexts/ThemeContext";
+import { toast } from "react-toastify";
 import IconsUtils from "../../../utils/IconsUtils";
 
 const EmailNetwork = () => {
@@ -9,10 +10,11 @@ const EmailNetwork = () => {
     navigator.clipboard
       .writeText(email)
       .then(() => {
-        alert("Correo copiado al portapapeles!");
+        toast.success(`Correo ${email} copiado!`);
       })
       .catch((error) => {
         console.error("Error al copiar el correo:", error);
+        toast.error("Error al copiar el correo. Inténtalo nuevamente.");
       });
   };
 
@@ -42,7 +44,7 @@ const EmailNetwork = () => {
         </span>
         lectronicos
       </p>
-      <div className="w-full my-5">
+      <div className="w-full my-5 text-gray-50">
         <div className="flex flex-col items-center gap-5">
           <button
             onClick={() => handleCopy("hectorc2907@gmail.com")}

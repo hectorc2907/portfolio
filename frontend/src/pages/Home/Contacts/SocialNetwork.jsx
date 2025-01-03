@@ -30,7 +30,7 @@ const SocialNetwork = () => {
         </span>
         ociales
       </p>
-      <div className="w-full my-5">
+      <div className="w-full my-5 text-gray-50">
         <div className="flex flex-col items-center gap-5">
           <a
             href="https://wa.me/5493812033116"
