@@ -18,6 +18,7 @@ const MenuToggle = ({ menuOpen, toggleMenu }) => {
             key="CloseToggle"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
             transition={{ duration: 0.2 }}
           >
             <IoClose onClick={() => toggleMenu(false)} />
@@ -27,6 +28,7 @@ const MenuToggle = ({ menuOpen, toggleMenu }) => {
             key="MenuToggle"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
             transition={{ duration: 0.2 }}
           >
             <IoMenu onClick={() => toggleMenu(true)} />
