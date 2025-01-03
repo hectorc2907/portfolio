@@ -11,14 +11,17 @@ const Services = () => {
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 + 0.15 * index }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 0.5, delay: 0.2 + 0.15 * index },
+          }}
+          whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
           viewport={{ once: true }}
           className={`flex flex-col justify-between mx-3 p-5 ${
             theme === "light"
               ? "bg-gray-50 text-gray-950"
               : "bg-gray-950 text-gray-50"
-          } rounded-2xl transition-colors duration-200`}
+          } rounded-2xl cursor-pointer transition-colors duration-200`}
         >
           <div>
             <p className="text-center text-xl font-playFair">{service.title}</p>

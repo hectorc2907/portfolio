@@ -8,8 +8,7 @@ const Skills = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.65 }}
+      whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.65 } }}
       viewport={{ once: true }}
       className={`mx-3 mt-5 lg:mt-10 p-5 ${
         theme === "light"
@@ -21,10 +20,13 @@ const Skills = () => {
       <div className="mt-7 mb-2 lg:mt-10 lg:mb-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
         {technologies.map((tech, index) => (
           <div key={index}>
-            <div className="flex flex-col items-center text-4xl">
+            <motion.div
+              whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
+              className="flex flex-col items-center text-4xl cursor-pointer"
+            >
               <IconsUtils tech={tech} />
               <span className="text-sm lg:text-base font-semibold">{tech}</span>
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>

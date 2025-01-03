@@ -1,6 +1,6 @@
 export const projects = [
   {
-    img: "https://pokemoncard.com.ar/cdn/shop/files/302309357_456479999835581_6109246632966201808_n_2048x.jpg?v=1664833366",
+    img: "https://res.cloudinary.com/deuuffnq7/image/upload/v1735884772/project1_aw4e3p.png",
     title: "Portfolio",
     description:
       "Portafolio moderno y responsivo con React, Tailwind CSS y animaciones con Motion, destacando proyectos y habilidades.",

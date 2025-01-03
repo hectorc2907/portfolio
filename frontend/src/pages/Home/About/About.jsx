@@ -21,14 +21,22 @@ const About = () => {
             viewport={{ once: true }}
             className="lg:ms-20 text-3xl lg:text-4xl text-center lg:text-start font-playFair font-semibold italic"
           >
-            Sobre{" "}
             <span
               className={`${
                 theme === "light" ? "text-redIcon" : "text-cianIcon"
               } transition-colors duration-200`}
             >
-              Mí
+              S
             </span>
+            obre{" "}
+            <span
+              className={`${
+                theme === "light" ? "text-redIcon" : "text-cianIcon"
+              } transition-colors duration-200`}
+            >
+              M
+            </span>
+            í
           </motion.p>
           <Services />
           <Skills />
