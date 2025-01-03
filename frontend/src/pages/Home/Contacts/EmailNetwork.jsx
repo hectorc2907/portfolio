@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useTheme } from "../../../contexts/ThemeContext";
 import IconsUtils from "../../../utils/IconsUtils";
 
@@ -16,7 +17,13 @@ const EmailNetwork = () => {
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.6 }}
+      viewport={{ once: true }}
+      className="flex flex-col items-center"
+    >
       <p className="text-2xl lg:text-3xl text-center lg:text-start font-playFair font-semibold italic">
         <span
           className={`${
@@ -53,7 +60,7 @@ const EmailNetwork = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

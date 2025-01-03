@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useTheme } from "../../../contexts/ThemeContext";
 import EmailNetwork from "./EmailNetwork";
 import SocialNetwork from "./SocialNetwork";
@@ -14,7 +15,13 @@ const Contacts = () => {
     >
       <div className="container p-2">
         <div className="py-16 lg:py-20">
-          <p className="mb-5 lg:ms-20 text-3xl lg:text-4xl text-center lg:text-start font-playFair font-semibold italic">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mb-5 lg:ms-20 text-3xl lg:text-4xl text-center lg:text-start font-playFair font-semibold italic"
+          >
             <span
               className={`${
                 theme === "light" ? "text-redIcon" : "text-cianIcon"
@@ -23,11 +30,20 @@ const Contacts = () => {
               C
             </span>
             ontactos
-          </p>
+          </motion.p>
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <SocialNetwork />
             <EmailNetwork />
           </div>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            viewport={{ once: true }}
+            className={`text-center ${theme === "light" ? "" : "text-gray-50"}`}
+          >
+            (click en el boton para copiar el email)
+          </motion.p>
         </div>
       </div>
     </section>
