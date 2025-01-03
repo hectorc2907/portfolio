@@ -15,21 +15,26 @@ const Footer = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.2, delay:0.2 }}
           viewport={{ once: true }}
           className={`pt-[1px] mx-5 ${
             theme === "light" ? "bg-gray-950" : "bg-cianIcon"
           }`}
         />
         <AnimatePresence mode="wait">
-          <a href="/" key={theme} className="m-5 flex justify-center">
+          <a
+            href="/"
+            key={theme}
+            className="m-5 flex justify-center"
+          >
             {theme === "light" ? (
               <motion.div
                 key="logoLongLight"
                 initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
+                whileInView={{ scale: 1 }}
                 exit={{ scale: 0 }}
                 transition={{ duration: 0.2 }}
+                viewport={{ once: true }}
               >
                 <img
                   src={logoLongLight}
@@ -41,9 +46,10 @@ const Footer = () => {
               <motion.div
                 key="logoLongDark"
                 initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
+                whileInView={{ scale: 1 }}
                 exit={{ scale: 0 }}
                 transition={{ duration: 0.2 }}
+                viewport={{ once: true }}
               >
                 <img
                   src={logoLongDark}
@@ -58,9 +64,10 @@ const Footer = () => {
           <motion.p
             key="logoLongLight"
             initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            whileInView={{ scale: 1 }}
             exit={{ scale: 0 }}
-            transition={{ duration: 0.2, delay: 0.2 }}
+            transition={{ duration: 0.2, delay: 0.4 }}
+            viewport={{ once: true }}
             className={`text-center ${theme === "light" ? "" : "text-gray-50"}`}
           >
             H.A.C Software | &copy; Todos los derechos reservados
