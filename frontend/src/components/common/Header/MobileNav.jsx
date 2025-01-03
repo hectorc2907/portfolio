@@ -14,7 +14,7 @@ const MobileNav = ({ menuOpen, scrollToSection }) => {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 300, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className={`fixed top-0 right-0 max-w-[425px] w-full h-screen pt-[67.92px] z-20 ${
+          className={`fixed top-0 right-0 max-w-full md:max-w-[425px] lg:hidden w-full h-screen pt-[67.92px] z-20 ${
             theme === "light" ? "bg-gray-50" : "bg-gray-950"
           } transition-colors duration-200`}
         >

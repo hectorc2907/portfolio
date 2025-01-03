@@ -4,7 +4,7 @@ const MenuOverlay = ({ menuOpen, setMenuOpen }) => {
     <>
       {menuOpen && (
         <div
-          className="fixed z-10 inset-0 backdrop-blur-sm bg-black/30"
+          className="fixed lg:hidden z-10 inset-0 backdrop-blur-sm bg-black/30"
           onClick={() => setMenuOpen(false)}
         ></div>
       )}
