@@ -8,7 +8,7 @@ const DownloadButton = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.35 }}
         viewport={{ once: true }}
-        href="https://drive.google.com/file/d/1XUcdiC5rwMPabcGn4QKPD2JAmV7F2kb1/view?usp=sharing"
+        href="https://drive.google.com/file/d/1bOS1nO8xOYPzdtE35ABkmrIxSumOcF2T/view?usp=sharing"
         target="_blank"
         className="max-w-[150px] w-full"
       >
